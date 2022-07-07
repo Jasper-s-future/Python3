@@ -101,4 +101,45 @@ print('连接列表',tuple + tinytuple)
 3、注意构造包含 0 或 1 个元素的元组的特殊语法规则。
 4、元组也可以使用+操作符进行拼接。
 '''
+'''
+元组与字符串类似，可以被索引且下标索引从0开始，-1 为从末尾开始的位置。也可以进行截取
+可以把字符串看作一种特殊的元组
+tuple的元素不可改变，但它可以包含可变的对象，比如list列表。
+tup1 = ()    # 空元组
+tup2 = (20,) # 一个元素，需要在元素后添加逗号
+'''
+'''
+string、list 和 tuple 都属于 sequence（序列）。
+'''
 
+print('--------Set（集合）-------')
+'''
+集合（set）是由一个或数个形态各异的大小整体组成的，构成集合的事物或对象称作元素或是成员。
+元素无序
+基本功能是进行成员关系测试和删除重复元素。
+可以使用大括号 { } 或者 set() 函数创建集合，注意：创建一个空集合必须用 set() 而不是 { }，因为 { } 是用来创建一个空字典。
+创建格式：
+parame = {value01,value02,...}
+或者
+set(value)
+'''
+sites = {'A','B','C','D','E','E'}
+print(sites)
+#成员测试
+if 'A' in sites:
+    print('A in sites')
+else:
+    print('A not in sites')
+
+result = 'A not in sites'
+if 'A' in sites:
+    result = 'A in sites'
+print(result)
+#set
+a = set('qwertyuiop-qwer-asdf')
+b = set('asdfghjkl-jkl-uiop')
+print(a,'&',b)
+print('ab差集',a - b)
+print('ab并集',a | b)
+print('ab交集',a & b)
+print('ab不同时存在的元素集合',a ^ b)
